@@ -9,6 +9,7 @@ import { Button } from 'antd'
 import { DownloadOutlined } from '@ant-design/icons'
 
 function App() {
+  console.log('NODE_ENV= ', process.env.NODE_ENV)
   const history = useHistory()
   return (
     <div>
