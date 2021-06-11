@@ -18,7 +18,12 @@
     flex-wrap: wrap;
 
     /* ★ 05:52 분 영상 이미지와 다름 */
-    /* ★ product-card 의 margin bottom 12px 때문에 #body 와 #footer 의 간격이 떨어지기 때문에 붙인다 (body 의 하단에 맞추기 위
+    /* ★ product-card 의 margin bottom 12px 때문에 #body 와 #footer 의 간격이 떨어지기 때문에 붙인다 (body 의 하단에 맞추기 위해 하는 설정) */
+    margin-top: 12px;
+}
+
+.product-card {
+    width: 180px;
     height: 300px;
     margin-right: 12px;
     margin-bottom: 12px;
