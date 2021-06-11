@@ -1,0 +1,61 @@
+#image-box {
+    max-height: 300px;
+    display: flex;
+    align-items: center; /* 컨테이너에서 아이템을 가운데 배치설정함 */
+    justify-content: center; /* 컨테이너에서 아이템을 가운데 배치설정함 */
+}
+
+#image-box > img {
+    width: 100%; /* 부모 컨테이너인 height: 300px 로 맞춰지며, 가로는 자동으로 맞춰진다 */
+    max-height: 300px;
+    object-fit: contain;
+}
+
+#profile-box {
+    padding: 16px;
+    margin-top: 8px;
+    border-bottom: 1px solid #e9ecef;
+    display:flex;
+    align-items: center; /* 프로필 이미지와 이름을 가운데 맞춤하기 위해 설정한다 */
+}
+
+#profile-box > img {
+    width: 50px;
+    height: 50px;
+}
+
+/* seller */
+#profile-box > span {
+    font-size: 15px;
+    margin-left: 8px;
+    font-weight: 600;
+}
+
+#content-box {
+    padding: 16px;
+}
+
+#name {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+#price {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#description {
+    margin-top: 16px;
+    font-size: 16px;
+}
+
+#createdAt {
+    font-size: 12px;
+    color: rgb(204, 204, 204)
+}
+
+#purchase-button {
+    margin-top: 8px;
+    margin-bottom: 16px;
+}

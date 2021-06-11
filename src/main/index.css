@@ -1,0 +1,104 @@
+
+#banner {
+    max-height: 300px;
+}
+
+#body > h1 {
+    margin-top: 16px;
+}
+
+/* 배너 100% 채우기 */
+#banner > img {
+    width: 100%;
+    max-height: 300px;
+}
+
+#product_list {
+    display: flex;
+    flex-wrap: wrap;
+
+    /* ★ 05:52 분 영상 이미지와 다름 */
+    /* ★ product-card 의 margin bottom 12px 때문에 #body 와 #footer 의 간격이 떨어지기 때문에 붙인다 (body 의 하단에 맞추기 위
+    height: 300px;
+    margin-right: 12px;
+    margin-bottom: 12px;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 12px;
+    overflow: hidden; /* 이미지가 border 를 침범하여 radius 처리가 안되어 overflow 로 처리함 */
+    position: relative;
+}
+
+.product-blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /*width: 100%;*/
+    /*height: 100%;*/
+    background-color: #ffffffaa; /* aa 투명도*/
+    pointer-events: none; /* blur 가 감싸주는 경우 클릭이 안된다 때문에 none 으로 설정하면 클릭 할 수 있다 */
+}
+
+.product-img {
+    width: 100%;
+    height: 210px;
+    object-fit: contain;
+}
+
+/* span 태그는 기본 inline 방식이기 때문에 수직정렬을 하기 위해 flex col 을 사용한다 */
+.product-content {
+    display: flex;
+    flex-direction: column;
+    padding: 8px; /* 텍스트의 너비만큼 갖기 때문에 부모와 간격이 붙어 있다 때문에 패딩을 주어 넉넉한 공간을 만들어준다*/;
+}
+
+.product-name {
+    font-size: 14px
+}
+
+.product-price {
+    font-size: 16px;
+    font-weight: 600;
+
+    /* content 안의 요소들 간격을 위함 */
+    margin-top: 4px;
+}
+
+/* img 와 span 은 수직정렬이 되기 때문에 수평정렬을 위해 flex 사용 */
+.product-seller {
+    display: flex;
+    /* 아래에서 이미지 크기를 줄였음에도 img 와 span 의 높이가 맞지 않는다 때문에 위치를 맞추기 위해 사용 */
+    align-items: center;
+
+}
+
+/* 이미지의 크기가 너무 큰 경우 부모의 요소를 벗어난다 이를 위헤 사이즈를 조절해준다 */
+.product-seller > img{
+    width: 24px; /* 100% 하면 부모요소이기 때문에 고정값으로 하는 것이 좋다 */
+    /* height 는 가로길이에 맞춰서 자동조절되기 때문에 적어줄 필요 없다 */
+
+    /* content 안의 요소들 간격을 위함 */
+    /*margin-top: 4px;*/ /* date 와 높이를 맞추기 위해 제거하고 product-footer 로 이동 */
+}
+
+.product-link {
+    color: inherit; /* a 태그 색이 아닌 원래 색을 갖게함 */
+    text-decoration: none;
+}
+
+.product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4px;
+}
+
+.product-date {
+    font-size: 12px;
+    color: rgb(136,136,136);
+}
+
+#product-headline {
+    margin-top: 8px;
+}
